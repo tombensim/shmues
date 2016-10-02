@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 var VALIDATION_TOKEN = 'EAAQ9NjHaMc0BAOiEBBsIVZCAarY4XYQTsNbA9JNZB7UZCHJQKA6310HWZCYuGfpTVq1tcRmmNP1NURLmiCeZCLTNIobSaa1Y7Tuq2iORha36ZC7ZAjxFAJFF25dejLg18WZCWK3AS44TubgjmmWC4xb5U7Uu3ZAmOTWUlACDt7pP68AZDZD';
 var PAGE_ACCESS_TOKEN ='EAAQ9NjHaMc0BALM2EmpCZC2lMaIob7yThFKCmCEC0kYGcJKWNBBPM2kOGY4XGcI0rFddKi9rYb1giC18p0oDbNbZBZAZB9ZBF3ILRaAMCRItnS8BZCACeErIag8ZAzSOu1Ugd5n6YpbyQbZBZBnJuLAwOtTokiGywVoluR6uFjZArgEQZDZD';
@@ -10,8 +11,11 @@ app.set('view engine', 'ejs');
 
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
-app.use('/static', express.static(__dirname + '/legal'));
+app.use('/static', express.static(__dirname + './legal/'));
 //GET Webhook from facebook messenger service, will be used to validate the server against facebook
+app.get('/legal',function(req,res) {
+	 res.sendFile(path.join(__dirname + '/legal/privacypolicy.htm'));
+});
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === VALIDATION_TOKEN) {
