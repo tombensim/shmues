@@ -170,7 +170,7 @@ function receivedPostback(event) {
 
 // receive messages from facebook messenger to the page account
 app.post('/webhook', function (req, res) {
-  var data = req.body;
+  var data = JSON.parse(JSON.stringify(req.body));
 
   // Make sure this is a page subscription
   if (data.object == 'page') {
