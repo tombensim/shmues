@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var VALIDATION_TOKEN = 'https://heroku-node-tom.herokuapp.com/webhook'
+var VALIDATION_TOKEN = 'EAAQ9NjHaMc0BAOiEBBsIVZCAarY4XYQTsNbA9JNZB7UZCHJQKA6310HWZCYuGfpTVq1tcRmmNP1NURLmiCeZCLTNIobSaa1Y7Tuq2iORha36ZC7ZAjxFAJFF25dejLg18WZCWK3AS44TubgjmmWC4xb5U7Uu3ZAmOTWUlACDt7pP68AZDZD';
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8080;
