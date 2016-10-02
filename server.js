@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var VALIDATION_TOKEN = 'EAAQ9NjHaMc0BAOiEBBsIVZCAarY4XYQTsNbA9JNZB7UZCHJQKA6310HWZCYuGfpTVq1tcRmmNP1NURLmiCeZCLTNIobSaa1Y7Tuq2iORha36ZC7ZAjxFAJFF25dejLg18WZCWK3AS44TubgjmmWC4xb5U7Uu3ZAmOTWUlACDt7pP68AZDZD';
 var PAGE_ACCESS_TOKEN = 'EAAQ9NjHaMc0BALM2EmpCZC2lMaIob7yThFKCmCEC0kYGcJKWNBBPM2kOGY4XGcI0rFddKi9rYb1giC18p0oDbNbZBZAZB9ZBF3ILRaAMCRItnS8BZCACeErIag8ZAzSOu1Ugd5n6YpbyQbZBZBnJuLAwOtTokiGywVoluR6uFjZArgEQZDZD';
-var fb = require('./chat-controllers/fb-controller');
+
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8080;
