@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
-
+app.use('/static', express.static(__dirname + '/legal'));
 //GET Webhook from facebook messenger service, will be used to validate the server against facebook
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
