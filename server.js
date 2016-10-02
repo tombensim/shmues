@@ -216,7 +216,9 @@ app.get('/', function(req, res) {
 	// ejs render automatically looks in the views folder
 	res.render('index');
 });
-
+app.get('/google564eeaec7a7612c9.html',function(req,res){
+	res.sendFile(path.join(__dirname + 'google564eeaec7a7612c9.html');
+});
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
