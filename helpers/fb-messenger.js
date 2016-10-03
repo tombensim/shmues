@@ -122,9 +122,10 @@ sendGenericMessage : function (recipientId) {
         }
       }
     }
-  };  
+  };
 
-  callSendAPI(messageData);
+
+  this.callSendAPI(messageData);
 
 },
 receivedPostback : function (event) {
