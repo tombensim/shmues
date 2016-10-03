@@ -44,23 +44,23 @@ receivedMessage : function (event) {
     // the text we received.
     switch (messageText) {
       case 'image':
-        sendImageMessage(senderID);
+        this.sendImageMessage(senderID);
         break;
 
       case 'button':
-        sendButtonMessage(senderID);
+        this.sendButtonMessage(senderID);
         break;
 
       case 'generic':
-        sendGenericMessage(senderID);
+        this.sendGenericMessage(senderID);
         break;
 
       case 'receipt':
-        sendReceiptMessage(senderID);
+        this.sendReceiptMessage(senderID);
         break;
 
       default:
-        sendTextMessage(senderID, messageText);
+        this.sendTextMessage(senderID, messageText);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");

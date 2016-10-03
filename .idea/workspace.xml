@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3b06229-20e7-48ba-8fea-34cd5f9c62fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/fb-messenger.js" afterPath="$PROJECT_DIR$/helpers/fb-messenger.js" />
     </list>
     <ignored path="heroku-node.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
               <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fb-messenger.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helpers/fb-messenger.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -89,6 +97,7 @@
         <option value="$PROJECT_DIR$/views/partials/footer.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/helpers/fb-messenger.js" />
       </list>
     </option>
   </component>
@@ -158,7 +167,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="server&#9;RUN_CONFIGURATION&#9;server.js&#10;package&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/package.json&#10;inde&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/views/index.ejs&#10;footer&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/views/partials/footer.ejs&#10;serve&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/server.js" />
+    <property name="SearchEverywhereHistoryKey" value="sendGenericMessage&#9;null&#9;null&#10;server&#9;RUN_CONFIGURATION&#9;server.js&#10;package&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/package.json&#10;inde&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/views/index.ejs&#10;footer&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/views/partials/footer.ejs&#10;serve&#9;FILE&#9;file://C:/Users/tom.ben-simhon/heroku/heruko-node/heroku-node/server.js" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
   </component>
@@ -235,7 +244,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1475495662842</updated>
-      <workItem from="1475495664675" duration="3178000" />
+      <workItem from="1475495664675" duration="3704000" />
     </task>
     <task id="LOCAL-00001" summary="added intellinj project template&#10;">
       <created>1475495859264</created>
@@ -276,7 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3178000" />
+    <option name="totallyTimeSpent" value="3704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="688" extended-state="0" />
@@ -360,6 +369,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/fb-messenger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
           <folding />
         </state>
       </provider>
