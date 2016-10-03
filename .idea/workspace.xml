@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f3b06229-20e7-48ba-8fea-34cd5f9c62fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integrations/fb/fb-messenger.js" afterPath="$PROJECT_DIR$/integrations/fb/fb-messenger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/fb-messenger.js" afterPath="$PROJECT_DIR$/helpers/fb-messenger.js" />
     </list>
     <ignored path="heroku-node.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,21 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fb-messenger.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fb-messenger.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/fb-messenger.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fb-messenger.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/integrations/fb/fb-messenger.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+            <state relative-caret-position="68">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -72,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,9 +117,9 @@
         <option value="$PROJECT_DIR$/views/partials/footer.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/keys/fb-tokens.js" />
-        <option value="$PROJECT_DIR$/helpers/fb-messenger.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/integrations/fb/fb-messenger.js" />
+        <option value="$PROJECT_DIR$/helpers/fb-messenger.js" />
       </list>
     </option>
   </component>
@@ -313,7 +303,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1475495662842</updated>
-      <workItem from="1475495664675" duration="5417000" />
+      <workItem from="1475495664675" duration="5987000" />
     </task>
     <task id="LOCAL-00001" summary="added intellinj project template&#10;">
       <created>1475495859264</created>
@@ -371,11 +361,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475534008897</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added request package and required it for fb controllers&#10;">
+      <created>1475534594970</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1475534594970</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5417000" />
+    <option name="totallyTimeSpent" value="5987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -418,7 +415,8 @@
     <MESSAGE value="added page footer" />
     <MESSAGE value="fixed refrenced funtions in fb helper" />
     <MESSAGE value="exported fb tokens to keys folder&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="exported fb tokens to keys folder&#10;" />
+    <MESSAGE value="added request package and required it for fb controllers&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added request package and required it for fb controllers&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -452,7 +450,7 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -475,18 +473,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/fb-messenger.js">
+    <entry file="file://$PROJECT_DIR$/integrations/fb/fb-messenger.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integrations/fb/fb-messenger.js">
+    <entry file="file://$PROJECT_DIR$/helpers/fb-messenger.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+        <state relative-caret-position="68">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
           <folding />
         </state>
       </provider>
