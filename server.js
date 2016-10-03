@@ -2,8 +2,8 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var fbh = require('./helpers/fb-messenger.js');
-var VALIDATION_TOKEN = 'EAAQ9NjHaMc0BAOiEBBsIVZCAarY4XYQTsNbA9JNZB7UZCHJQKA6310HWZCYuGfpTVq1tcRmmNP1NURLmiCeZCLTNIobSaa1Y7Tuq2iORha36ZC7ZAjxFAJFF25dejLg18WZCWK3AS44TubgjmmWC4xb5U7Uu3ZAmOTWUlACDt7pP68AZDZD';
-var PAGE_ACCESS_TOKEN ='EAAQ9NjHaMc0BALM2EmpCZC2lMaIob7yThFKCmCEC0kYGcJKWNBBPM2kOGY4XGcI0rFddKi9rYb1giC18p0oDbNbZBZAZB9ZBF3ILRaAMCRItnS8BZCACeErIag8ZAzSOu1Ugd5n6YpbyQbZBZBnJuLAwOtTokiGywVoluR6uFjZArgEQZDZD';
+var VALIDATION_TOKEN = 'EAAQ9NjHaMc0BAG4k3aBPkU72vQ3z5Xg4acksKfrmiTzkrlG0cypJlJCwZBq6lRYwAOpZAOpZB7gGPIFkZA5WpWoYF7KjGZAhVuZA9YZCLojalh31mHwVfUZAVBkUmMRWkRjYJBdW2OsHRfjx078SjZAvaOJY7PosTI1d18bU1hfAZCnAZDZD';
+var PAGE_ACCESS_TOKEN ='EAAQ9NjHaMc0BAG4k3aBPkU72vQ3z5Xg4acksKfrmiTzkrlG0cypJlJCwZBq6lRYwAOpZAOpZB7gGPIFkZA5WpWoYF7KjGZAhVuZA9YZCLojalh31mHwVfUZAVBkUmMRWkRjYJBdW2OsHRfjx078SjZAvaOJY7PosTI1d18bU1hfAZCnAZDZD';
 var port = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
 // set the port of our application
@@ -33,7 +33,7 @@ app.get('/webhook', function(req, res) {
 // receive messages from facebook messenger to the page account
 app.post('/webhook', function (req, res) {
   var data = req.body;
-
+  console.log(data);
   // Make sure this is a page subscription
   if (data.object === 'page') {
     // Iterate over each entry
