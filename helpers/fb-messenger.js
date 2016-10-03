@@ -77,7 +77,7 @@ sendTextMessage : function (recipientId, messageText) {
     }
   };
 
-  callSendAPI(messageData);
+  this.callSendAPI(messageData);
 },
 
 sendGenericMessage : function (recipientId) {
