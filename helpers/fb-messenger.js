@@ -1,8 +1,8 @@
 var PAGE_ACCESS_TOKEN = require('../keys/fb-tokens').PAGE_ACCESS_TOKEN;
-
+var request = require("request");
 module.exports = {
 callSendAPI : function (messageData) {
-  request({
+  this.request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
     qs: { access_token: PAGE_ACCESS_TOKEN },
     method: 'POST',
