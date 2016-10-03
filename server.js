@@ -2,21 +2,20 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var fbh = require('./helpers/fb-messenger.js');
-var VALIDATION_TOKEN = 'EAAQ9NjHaMc0BAG4k3aBPkU72vQ3z5Xg4acksKfrmiTzkrlG0cypJlJCwZBq6lRYwAOpZAOpZB7gGPIFkZA5WpWoYF7KjGZAhVuZA9YZCLojalh31mHwVfUZAVBkUmMRWkRjYJBdW2OsHRfjx078SjZAvaOJY7PosTI1d18bU1hfAZCnAZDZD';
-var PAGE_ACCESS_TOKEN ='EAAQ9NjHaMc0BAG4k3aBPkU72vQ3z5Xg4acksKfrmiTzkrlG0cypJlJCwZBq6lRYwAOpZAOpZB7gGPIFkZA5WpWoYF7KjGZAhVuZA9YZCLojalh31mHwVfUZAVBkUmMRWkRjYJBdW2OsHRfjx078SjZAvaOJY7PosTI1d18bU1hfAZCnAZDZD';
 var port = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+VALIDATION_TOKEN = require('./keys/fb-tokens').VALIDATION_TOKEN;
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-// set the view engine to ejs*
+// set the view e gine to ejs*
 app.set('view engine', 'ejs');
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // make express look in the public directory for assets (css/js/img)
 app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -69,7 +68,7 @@ app.post('/webhook', function (req, res) {
     //
     // You must send back a 200, within 20 seconds, to let us know you've 
     // successfully received the callback. Otherwise, the request will time out.
-    console.log('received message with message' + data.message)
+    console.log('received message with message' + data.message);
     res.sendStatus(200);
   }
 });

@@ -1,4 +1,6 @@
-module.exports = { 
+var PAGE_ACCESS_TOKEN = require('../keys/fb-tokens').PAGE_ACCESS_TOKEN;
+
+module.exports = {
 callSendAPI : function (messageData) {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
@@ -123,7 +125,6 @@ sendGenericMessage : function (recipientId) {
       }
     }
   };
-
 
   this.callSendAPI(messageData);
 
