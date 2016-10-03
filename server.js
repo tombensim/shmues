@@ -6,10 +6,17 @@ var VALIDATION_TOKEN = 'EAAQ9NjHaMc0BAG4k3aBPkU72vQ3z5Xg4acksKfrmiTzkrlG0cypJlJC
 var PAGE_ACCESS_TOKEN ='EAAQ9NjHaMc0BAG4k3aBPkU72vQ3z5Xg4acksKfrmiTzkrlG0cypJlJCwZBq6lRYwAOpZAOpZB7gGPIFkZA5WpWoYF7KjGZAhVuZA9YZCLojalh31mHwVfUZAVBkUmMRWkRjYJBdW2OsHRfjx078SjZAvaOJY7PosTI1d18bU1hfAZCnAZDZD';
 var port = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
+var bodyParser = require('body-parser')
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 // set the view engine to ejs*
 app.set('view engine', 'ejs');
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 // make express look in the public directory for assets (css/js/img)
 app.use(favicon(__dirname + '/public/favicon.ico'));
