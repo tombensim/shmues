@@ -1,2 +1,8 @@
 body 						{ padding-top:50px; }
 .container .jumbotron   	{ border-radius:40px; }
+.container .jumbotron .img-responsive {
+    display: block;
+    height: auto;
+    max-width: 3%;
+    width: 60px;
+}

@@ -65,7 +65,7 @@ receivedMessage : function (event) {
         this.sendTextMessage(senderID, messageText);
     }
   } else if (messageAttachments) {
-    sendTextMessage(senderID, "Message with attachment received");
+    this.sendTextMessage(senderID, "Message with attachment received");
   }
 },
 
