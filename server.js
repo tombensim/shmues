@@ -33,12 +33,13 @@ app.use(bodyParser.json());
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use('/controllers',express.static(path.join(__dirname, './controllers')));
 app.use(express.static(__dirname + '/public'));
-app.use('/static', express.static(__dirname + './legal/'));
+app.use('/static', express.static(__dirname + './static/'));
 
 //GET Webhook from facebook messenger service, will be used to validate the server against facebook
 app.get('/legal',function(req,res) {
 	 res.sendFile(path.join(__dirname + '/legal/privacypolicy.htm'));
 });
+
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === VALIDATION_TOKEN) {
