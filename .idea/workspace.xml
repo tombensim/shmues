@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3b06229-20e7-48ba-8fea-34cd5f9c62fd" name="Default" comment="" />
+    <list default="true" id="f3b06229-20e7-48ba-8fea-34cd5f9c62fd" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/legal/privacypolicy.htm" afterPath="$PROJECT_DIR$/static/public/legal/privacypolicy.htm" />
+    </list>
     <ignored path="heroku-node.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,24 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="208">
+              <caret line="179" column="52" selection-start-line="179" selection-start-column="52" selection-end-line="179" selection-end-column="52" />
               <folding>
                 <element signature="e#1585#1619#0" expanded="false" />
                 <element signature="e#1963#2059#0" expanded="false" />
                 <element signature="e#4473#4856#0" expanded="false" />
                 <element signature="e#4969#6490#0" expanded="false" />
                 <element signature="e#6771#6868#0" expanded="false" />
-                <element signature="e#6913#7008#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fb-tokens.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fb-tokens.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/keys/fb-tokens.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -274,6 +275,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku-node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku-node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -289,17 +308,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\static" />
-      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\app" />
-      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\app\integrations" />
-      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\static\js\services" />
       <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\app\models" />
       <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\static\google" />
       <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\views\partials" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\static\public" />
+      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\static" />
+      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\app" />
+      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node\app\integrations" />
+      <recent name="C:\Users\tom.ben-simhon\heroku\heruko-node\heroku-node" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
@@ -387,7 +407,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475495662842</updated>
       <workItem from="1475495664675" duration="30106000" />
-      <workItem from="1475695697673" duration="7509000" />
+      <workItem from="1475695697673" duration="7688000" />
     </task>
     <task id="LOCAL-00001" summary="added intellinj project template&#10;">
       <created>1475495859264</created>
@@ -484,7 +504,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37615000" />
+    <option name="totallyTimeSpent" value="37794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1367" height="735" extended-state="0" />
@@ -574,7 +594,6 @@
             <element signature="e#4473#4856#0" expanded="false" />
             <element signature="e#4969#6490#0" expanded="false" />
             <element signature="e#6771#6868#0" expanded="false" />
-            <element signature="e#6913#7008#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -645,7 +664,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/legal/privacypolicy.htm">
+    <entry file="file://$PROJECT_DIR$/static/public/legal/privacypolicy.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
@@ -809,27 +828,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#1585#1619#0" expanded="false" />
-            <element signature="e#1963#2059#0" expanded="false" />
-            <element signature="e#4473#4856#0" expanded="false" />
-            <element signature="e#4969#6490#0" expanded="false" />
-            <element signature="e#6771#6868#0" expanded="false" />
-            <element signature="e#6913#7008#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/keys/fb-tokens.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="203" selection-start-line="5" selection-start-column="203" selection-end-line="5" selection-end-column="203" />
           <folding>
             <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="179" column="52" selection-start-line="179" selection-start-column="52" selection-end-line="179" selection-end-column="52" />
+          <folding>
+            <element signature="e#1585#1619#0" expanded="false" />
+            <element signature="e#1963#2059#0" expanded="false" />
+            <element signature="e#4473#4856#0" expanded="false" />
+            <element signature="e#4969#6490#0" expanded="false" />
+            <element signature="e#6771#6868#0" expanded="false" />
           </folding>
         </state>
       </provider>
