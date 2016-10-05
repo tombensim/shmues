@@ -177,7 +177,7 @@ router.route('/chat').get(function (req, res) {
         res.sendFile(path.join(__dirname + 'static/google/google564eeaec7a7612c9.html'));
     });
     app.get('/legal', function (req, res) {
-        res.sendFile(path.join(__dirname + './static/public/legal/privacypolicy.htm'));
+        res.sendFile(path.join(__dirname + '/static/public/legal/privacypolicy.htm'));
     });
 
     app.listen(port, function () {
