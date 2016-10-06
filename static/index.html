@@ -41,10 +41,9 @@
 				<!-- LOOP OVER THE TODOS IN $scope.shmuess -->
 				<div class="checkbox" ng-repeat="chat in shmues">
 					<label>
-						<input type="checkbox" ng-click="deleteTodo(chat._id)"> {{ chat.id }}
+						<input type="checkbox" ng-click="deleteTodo(chat._id)"> {{ chat.msg }}
 					</label>
 				</div>
-				<button type="button" class="btn btn-primary btn-lg" ng-click="deleteShmues()">Delete</button>
 				<p class="text-center" ng-show="loading">
 					<span class="fa fa-spinner fa-spin fa-3x"></span>
 				</p>
@@ -61,9 +60,9 @@
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
 						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
 					</div>
-
 					<!-- createToDo() WILL CREATE NEW TODOS -->
 					<button type="submit" class="btn btn-primary btn-lg" ng-click="createShmues()">Add</button>
+					<button type="button" class="btn btn-primary btn-lg" ng-click="deleteShmues()">Delete All</button>
 				</form>
 			</div>
 		</div>
