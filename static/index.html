@@ -32,7 +32,7 @@
 	<div class="container">
 		<!-- HEADER AND TODO COUNT -->
 		<div class="jumbotron text-center">
-			<h1>I'm a Shmues-aholic <span class="label label-info">{{ shmuess.length }}</span></h1>
+			<h1>I'm a Shmues-aholic <span class="label label-info">{{ shmues.length }}</span></h1>
 		</div>
 
 		<!-- TODO LIST -->
@@ -41,7 +41,7 @@
 				<!-- LOOP OVER THE TODOS IN $scope.shmuess -->
 				<div class="checkbox" ng-repeat="chat in shmues">
 					<label>
-						<input type="checkbox" ng-click="deleteTodo(chat._id)"> {{ chat.msg }}
+						<input type="checkbox" ng-click="deleteTodo(chat._id)"> {{ chat.msg }} </input>
 					</label>
 				</div>
 				<p class="text-center" ng-show="loading">

@@ -1,8 +1,8 @@
 //Vars
 var express = require('express');
 var path = require('path');
-var app = express();
-var http = require('http').Server(app);
+var server = express();
+var http = require('http').Server(server);
 var io = require('socket.io')(http);
 var fbh = require('./app/helpers/fb-messenger.js');
 var port = process.env.PORT || 8080;
@@ -23,30 +23,83 @@ var Chat = require('./app/models/chat.js');
 //Configuration -----------------------------------------------------------------------
 mongoose.connect(database.remoteUrl); 	// Connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
 
-app.use(express.static('./static')); 		// set the static files location /public/img will be /img for users
-app.use(morgan('dev')); // log every request to the console
-app.use(bodyParser.urlencoded({'extended': 'true'})); // parse application/x-www-form-urlencoded
-app.use(bodyParser.json()); // parse application/json
-app.use(bodyParser.json({type: 'application/vnd.api+json'})); // parse application/vnd.api+json as json
-app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request
-// app.use(favicon(__dirname + '.static/public/favicon.ico'));
+server.use(express.static('./static')); 		// set the static files location /public/img will be /img for users
+server.use(morgan('dev')); // log every request to the console
+server.use(bodyParser.urlencoded({'extended': 'true'})); // parse serverlication/x-www-form-urlencoded
+server.use(bodyParser.json()); // parse serverlication/json
+server.use(bodyParser.json({type: 'serverlication/vnd.api+json'})); // parse serverlication/vnd.api+json as json
+server.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request
+// server.use(favicon(__dirname + '.static/public/favicon.ico'));
 //-------------------------------------------------------------------------------------
 
-// set the port of our application
+// set the port of our serverlication
 // process.env.PORT lets the port be set by Heroku
 // set the view e gine to ejs*
-// app.set('view engine', 'ejs');
-//app.engine('html', require('ejs').renderFile);
+// server.set('view engine', 'ejs');
+//server.engine('html', require('ejs').renderFile);
 
 // Set Socket.io Connection -----------------------------------------------------------
-app.io = io;
+server.io = io;
 //set client server socket connection
-io.on('connection', function (socket) {
-    socket.on('chat message', function (msg) {
-        io.emit('chat message', msg);
-    });
-});
-// End Socket.io Connection -----------------------------------------------------------
+// io.on('connection', function (socket) {
+//     var addedUser = false;
+//
+//     // when the client emits 'new message', this listens and executes
+//     socket.on('new message', function (data) {
+//          // we tell the client to execute 'new message'
+//         socket.broadcast.emit('new message', {
+//             username: socket.username,
+//             message: data
+//         });
+//     });
+//
+//     // when the client emits 'add user', this listens and executes
+//     socket.on('add user', function (username) {
+//         if (addedUser) return;
+//
+//         // we store the username in the socket session for this client
+//         socket.username = username;
+//         ++numUsers;
+//         addedUser = true;
+//         socket.emit('login', {
+//             numUsers: numUsers
+//         });
+//         // echo globally (all clients) that a person has connected
+//         socket.broadcast.emit('user joined', {
+//             username: socket.username,
+//             numUsers: numUsers
+//         });
+//     });
+//
+//     // when the client emits 'typing', we broadcast it to others
+//     socket.on('typing', function () {
+//         socket.broadcast.emit('typing', {
+//             username: socket.username
+//         });
+//     });
+//
+//     // when the client emits 'stop typing', we broadcast it to others
+//     socket.on('stop typing', function () {
+//         socket.broadcast.emit('stop typing', {
+//             username: socket.username
+//         });
+//     });
+//
+//     // when the user disconnects.. perform this
+//     socket.on('disconnect', function () {
+//         if (addedUser) {
+//             --numUsers;
+//
+//             // echo globally that this client has left
+//             socket.broadcast.emit('user left', {
+//                 username: socket.username,
+//                 numUsers: numUsers
+//             });
+//         }
+//     });
+// });
+//
+// // End Socket.io Connection -----------------------------------------------------------
 
 // set the API router and middleware -------------------------------------------------------
 // all of our routes will be prefixed with /api
@@ -56,11 +109,13 @@ router.use(function (req, res, next) {
     console.log('request body - ' + JSON.stringify(req.body));
     next(); // make sure we go to the next routes and don't stop here
 });
-app.use('/api', router);
+server.use('/api', router);
 
 // set the API router and middleware -------------------------------------------------------
 
-app.get('/', function (req, res) {
+
+//Facebook authentication against pageg
+server.get('/', function (req, res) {
     if (req.query['hub.mode'] === 'subscribe' &&
         req.query['hub.verify_token'] === VALIDATION_TOKEN) {
         console.log("Validating webhook");
@@ -72,7 +127,7 @@ app.get('/', function (req, res) {
 });
 
 // receive messages from facebook messenger to the page account
-app.post('/webhook', function (req, res) {
+server.post('/webhook', function (req, res) {
     var data = req.body;
     console.log(data);
     // Make sure this is a page subscription
@@ -109,18 +164,18 @@ app.post('/webhook', function (req, res) {
 });
 
 // set the home page route
-app.get('/', function (req, res) {
+server.get('/', function (req, res) {
 // set the legal route
     // ejs render automatically looks in the views folder
     res.render(__dirname + '/static/index.html');
 });
-app.get('/google564eeaec7a7612c9.html', function (req, res) {
+server.get('/google564eeaec7a7612c9.html', function (req, res) {
     res.sendFile(path.join(__dirname + 'static/google/google564eeaec7a7612c9.html'));
 });
-app.get('/legal', function (req, res) {
+server.get('/legal', function (req, res) {
     res.sendFile(path.join(__dirname + '/static/public/legal/privacypolicy.htm'));
 });
 
-app.listen(port, function () {
-    console.log('Our app is running on http://localhost:' + port);
+server.listen(port, function () {
+    console.log('Our server is running on http://localhost:' + port);
 });

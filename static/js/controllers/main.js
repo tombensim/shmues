@@ -12,7 +12,8 @@ angular.module('shmuesController', [])
             .success(function (data) {
                 $scope.shmues = data;
                 $scope.loading = false;
-            });
+            })
+
 
         // CREATE ==================================================================
         // when submitting the add form, send the text to the node API
@@ -28,9 +29,15 @@ angular.module('shmuesController', [])
 
                 // if successful creation, call our get function to get all the new shmues
                     .success(function (data) {
+                        var chat = {
+                            "msg" : $scope.formData.text
+                        };
+                        console.log('starting to create an object');
                         $scope.loading = false;
                         $scope.formData = {}; // clear the form so our user is ready to enter another
-                        $scope.shmues = data; // assign our new list of shmues
+                        $scope.shmues = chat;
+                        location.reload();
+
                     });
             }
         };
@@ -48,6 +55,7 @@ angular.module('shmuesController', [])
                     Shmues.delete(chat["_id"]).success(function (data) {
                         $scope.loading = false;
                         $scope.shmues = data; // assign our new list of shmues
+
                     });
                 }
                 $scope.loading = false;

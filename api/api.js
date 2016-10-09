@@ -50,7 +50,6 @@ router.route('/chat').get(function (req, res) {
         chat.save(function (err) {
             if (err)
                 res.send(err);
-
             res.json({message: 'Chat created!'});
         });
 
